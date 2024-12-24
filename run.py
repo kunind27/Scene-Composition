@@ -195,6 +195,17 @@ def image_conditioned_inpainting(image, mask, x_shift, y_shift, inpainting_model
     """
     Move an object using ControlNet-guided inpainting process, using the extracted
     object as reference for the new placement.
+    
+    Args:
+        image (np.ndarray): Original image
+        mask (np.ndarray): Binary mask of object to move
+        x_shift (int): Horizontal shift in pixels
+        y_shift (int): Vertical shift in pixels 
+        inpainting_model: ControlNet inpainting model
+        class_name (str): Name of object class for saving intermediate results
+    
+    Returns:
+        PIL.Image: Final inpainted image with object moved to new location
     """
     height, width = image.shape[:2]
     image_pil = Image.fromarray(image)
@@ -238,8 +249,8 @@ def image_conditioned_inpainting(image, mask, x_shift, y_shift, inpainting_model
     shifted_mask = create_shifted_mask(mask, x_shift, y_shift, height, width)
     shifted_mask_pil = Image.fromarray((shifted_mask * 255).astype(np.uint8))
     
-    # Create control image using the extracted object by
-    # roughly superimposing the class object image over
+    # Create control image using the extracted object by superimposing
+    # the class object image over the shifted mask in the inpainted scene
     control_image = np.array(inpainted_background)
     y_indices, x_indices = np.where(shifted_mask)
     if len(y_indices) > 0 and len(x_indices) > 0:
