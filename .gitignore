@@ -26,4 +26,4 @@ venv/
 .idea/
 
 # Exclude jpeg files in the root
-/.jpeg
+/*.jpeg

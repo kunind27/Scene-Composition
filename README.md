@@ -40,7 +40,7 @@ We use the implementation of these models present on Diffusers and Transformers 
 ### Command-line Arguments
 
 ```bash
-python move_object.py --image <image_path> --class <object_class> [--output <output_path>] [--x <x_shift>] [--y <y_shift>]
+python run.py --image <image_path> --class <object_class> [--output <output_path>] [--x <x_shift>] [--y <y_shift>]
 ```
 
 #### Arguments:
@@ -56,14 +56,14 @@ python move_object.py --image <image_path> --class <object_class> [--output <out
 To segment an object:
 
 ```bash
-python move_object.py --image input.jpg --class "chair" --output segmented_output.png
+python run.py --image input.jpg --class "chair" --output segmented_output.png
 ```
 
 #### Object Movement
 To move an object:
 
 ```bash
-python move_object.py --image input.jpg --class "chair" --output moved_output.png --x 50 --y 100
+python run.py --image input.jpg --class "chair" --output moved_output.png --x 50 --y 100
 ```
 
 ## Output
