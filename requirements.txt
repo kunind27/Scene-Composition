@@ -8,10 +8,6 @@ matplotlib
 scikit-image
 scipy
 
-# For Segmentation and Object Detection
-segment-anything>=1.0
-groundingdino-py>=0.4.0
-
 # Stable Diffusion for inpainting
 diffusers>=0.24.0
 transformers>=4.36.0
