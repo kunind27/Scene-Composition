@@ -1,0 +1,19 @@
+torch
+torchvision
+numpy
+opencv-python
+Pillow
+tqdm
+matplotlib
+scikit-image
+scipy
+
+# For Segmentation and Object Detection
+segment-anything>=1.0
+groundingdino-py>=0.4.0
+
+# Stable Diffusion for inpainting
+diffusers>=0.24.0
+transformers>=4.36.0
+accelerate>=0.25.0
+xformers>=0.0.22.post7

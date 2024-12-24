@@ -1,0 +1,29 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs and debugging files
+*.log
+*.debug
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Virtual environment directories
+venv/
+.env/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Exclude jpeg files in the root
+/.jpeg
