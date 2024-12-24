@@ -81,7 +81,8 @@ def segment_object(image_path, text_prompt, grounding_models, sam_models, box_th
     results = dino_processor.post_process_grounded_object_detection(outputs, 
                                                                     input_ids=inputs.input_ids,
                                                                     target_sizes=target_sizes,
-                                                                    box_threshold=box_threshold)[0]
+                                                                    box_threshold=box_threshold,
+                                                                    text_threshold=text_threshold)[0]
     
     # Check if {text_prompt} was detected in the image or not
     if len(results["boxes"]) == 0:
